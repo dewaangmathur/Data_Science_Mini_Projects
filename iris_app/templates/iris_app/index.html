@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Iris Flower Classification{% endblock %}
+
+{% block content %}
+<h2>🌸 Iris Flower Classifier</h2>
+<form method="post" action="/iris/predict/">
+  {% csrf_token %}
+
+  <label for="sepal_length">Sepal Length:</label><br>
+  <input type="number" id="sepal_length" name="sepal_length" step="any" required placeholder="e.g., 5.1"><br><br>
+
+  <label for="sepal_width">Sepal Width:</label><br>
+  <input type="number" id="sepal_width" name="sepal_width" step="any" required placeholder="e.g., 3.5"><br><br>
+
+  <label for="petal_length">Petal Length:</label><br>
+  <input type="number" id="petal_length" name="petal_length" step="any" required placeholder="e.g., 1.4"><br><br>
+
+  <label for="petal_width">Petal Width:</label><br>
+  <input type="number" id="petal_width" name="petal_width" step="any" required placeholder="e.g., 0.2"><br><br>
+
+  <input type="submit" value="Classify Flower">
+</form>
+{% endblock %}

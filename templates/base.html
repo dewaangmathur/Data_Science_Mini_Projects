@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}CODSOFT Projects{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/global.css">
+</head>
+<body>
+  <header>
+    <h1>CODSOFT Data Science Projects</h1>
+    <nav>
+      <a href="/">Home</a> |
+      <a href="/titanic/">Titanic</a> |
+      <a href="/movie/">Movie</a> |
+      <a href="/iris/">Iris</a> |
+      <a href="/sales/">Sales</a> |
+      <a href="/fraud/">Fraud</a>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>© 2025 CODSOFT Internship</p>
+  </footer>
+</body>
+</html>

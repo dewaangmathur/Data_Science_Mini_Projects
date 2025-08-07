@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Movie Rating Prediction{% endblock %}
+
+{% block content %}
+<h2>🎬 Movie Rating Predictor</h2>
+<form method="post" action="{% url 'movie_predict' %}">
+  {% csrf_token %}
+
+  <label for="genre">Genre:</label><br>
+  <select name="genre" id="genre" required>
+    {% for g in genres %}
+      <option value="{{ g }}">{{ g }}</option>
+    {% endfor %}
+  </select><br><br>
+
+  <label for="director">Director:</label><br>
+  <select name="director" id="director" required>
+    {% for d in directors %}
+      <option value="{{ d }}">{{ d }}</option>
+    {% endfor %}
+  </select><br><br>
+
+  <label for="actor">Lead Actor:</label><br>
+  <select name="actor" id="actor" required>
+    {% for a in actors %}
+      <option value="{{ a }}">{{ a }}</option>
+    {% endfor %}
+  </select><br><br>
+
+  <input type="submit" value="Predict Rating">
+</form>
+{% endblock %}

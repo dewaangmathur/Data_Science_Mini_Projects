@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Titanic Survival Prediction{% endblock %}
+
+{% block content %}
+<h2>🛳️ Titanic Survival Predictor</h2>
+<form method="post" action="/titanic/predict/">
+  {% csrf_token %}
+
+  <label for="pclass">Passenger Class (1 = 1st, 2 = 2nd, 3 = 3rd):</label><br>
+  <input type="number" id="pclass" name="pclass" required placeholder="e.g., 1"><br><br>
+
+  <label for="age">Age:</label><br>
+  <input type="number" id="age" step="any" name="age" required placeholder="e.g., 29"><br><br>
+
+  <label for="sibsp">Number of Siblings/Spouses Aboard:</label><br>
+  <input type="number" id="sibsp" name="sibsp" required placeholder="e.g., 1"><br><br>
+
+  <label for="fare">Fare:</label><br>
+  <input type="number" id="fare" step="any" name="fare" required placeholder="e.g., 72.5"><br><br>
+
+  <label for="gender">Gender (Male/Female):</label><br>
+  <input type="text" id="gender" name="gender" required placeholder="Male or Female"><br><br>
+
+  <input type="submit" value="Predict">
+</form>
+{% endblock %}

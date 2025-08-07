@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Credit Card Fraud Detection{% endblock %}
+
+{% block content %}
+<h2>💳 Credit Card Fraud Detector</h2>
+
+{% if error %}
+  <p style="color:red;"><strong>Error: {{ error }}</strong></p>
+{% endif %}
+
+<form method="post" action="{% url 'fraud_predict' %}">
+  {% csrf_token %}
+
+  <label for="time">Transaction Time: (in seconds)</label><br>
+  <input type="number" step="any" name="time" required placeholder="e.g., 57382"><br><br>
+
+  {% for i in numbers %}
+    <label for="v{{ i }}">Feature V{{ i }}:</label><br>
+    <input type="number" step="any" name="v{{ i }}" required placeholder="e.g., 0.23"><br><br>
+  {% endfor %}
+
+  <label for="averaged_v">Averaged V (Auto-calculated):</label><br>
+  <input type="number" step="any" name="averaged_v" readonly
+         value="Calculated internally" style="background:#f0f0f0; border:none; padding:5px; width:100%;"><br><br>
+
+  <label for="amount">Transaction Amount:</label><br>
+  <input type="number" step="any" name="amount" required placeholder="e.g., 150.75"><br><br>
+
+  <input type="submit" value="Check for Fraud">
+</form>
+
+<div style="margin-top:20px; padding:10px; border:1px solid #ddd; background:#f9f9f9;">
+  <strong>Note:</strong> V1 to V28 are anonymized transaction features. Just fill them with appropriate values or use sample data. "Averaged V" is calculated by the system for better accuracy.
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Sales Prediction{% endblock %}
+
+{% block content %}
+<h2>📊 Sales Prediction Tool</h2>
+<form method="post" action="/sales/predict/">
+  {% csrf_token %}
+
+  <label for="tv">TV Ad Spend:</label><br>
+  <input type="number" id="tv" name="tv" step="any" required placeholder="e.g., 230.5"><br><br>
+
+  <label for="radio">Radio Ad Spend:</label><br>
+  <input type="number" id="radio" name="radio" step="any" required placeholder="e.g., 37.8"><br><br>
+
+  <label for="newspaper">Newspaper Ad Spend:</label><br>
+  <input type="number" id="newspaper" name="newspaper" step="any" required placeholder="e.g., 69.2"><br><br>
+
+  <input type="submit" value="Predict Sales">
+</form>
+{% endblock %}

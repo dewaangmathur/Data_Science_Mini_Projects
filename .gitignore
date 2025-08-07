@@ -1,0 +1,65 @@
+# 🐍 Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+*.pyo
+*.pyd
+*.log
+
+# 💻 Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# 📦 Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.Python
+
+# 🔐 Secret environment files
+.env
+*.env
+
+# 🧪 Unit test artifacts
+coverage/
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+
+# 🔧 Django
+db.sqlite3
+*.sqlite3
+*.log
+staticfiles/
+media/
+local_settings.py
+
+# 📦 Python package artifacts
+build/
+dist/
+*.egg-info/
+
+# ⚙️ IDEs & Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 🔁 OS-specific
+.DS_Store
+Thumbs.db
+
+# 🔒 Credentials / API keys
+*.key
+*.pem
+
+# 🚀 Render or Heroku Deployment
+staticfiles/
+runtime.txt
+Procfile
+
+# ✅ Allow model files
+!ml_models/*.pkl

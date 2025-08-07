@@ -1,0 +1,104 @@
+CODSOFT/
+├── manage.py
+├── requirements.txt
+├── Procfile
+├── runtime.txt
+├── README.md
+├── train_all_models.ipynb
+├── folder_structure.txt
+├── advertising.csv
+├── imdb_indian_movies.csv
+├── iris.csv
+├── creditcard.csv
+├── titanic.csv
+│
+├── codsoft/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+├── titanic_app/
+├── __init__.py
+├── admin.py
+├── apps.py
+├── models.py
+├── tests.py
+├── urls.py
+├── views.py
+├── templates/
+│   └── titanic_app/
+│       ├── index.html
+│       └── result.html
+└── static/
+    └── titanic_app/
+        └── style.css
+├── movie_app/
+├── __init__.py
+├── admin.py
+├── apps.py
+├── models.py
+├── tests.py
+├── urls.py
+├── views.py
+├── templates/
+│   └── movie_app/
+│       ├── index.html
+│       └── result.html
+└── static/
+    └── movie_app/
+        └── style.css
+├── iris_app/
+├── __init__.py
+├── admin.py
+├── apps.py
+├── models.py
+├── tests.py
+├── urls.py
+├── views.py
+├── templates/
+│   └── iris_app/
+│       ├── index.html
+│       └── result.html
+└── static/
+    └── iris_app/
+        └── style.css
+├── sales_app/
+├── __init__.py
+├── admin.py
+├── apps.py
+├── models.py
+├── tests.py
+├── urls.py
+├── views.py
+├── templates/
+│   └── sales_app/
+│       ├── index.html
+│       └── result.html
+└── static/
+    └── sales_app/
+        └── style.css
+├── fraud_app/
+├── __init__.py
+├── admin.py
+├── apps.py
+├── models.py
+├── tests.py
+├── urls.py
+├── views.py
+├── templates/
+│   └── fraud_app/
+│       ├── index.html
+│       └── result.html
+└── static/
+    └── fraud_app/
+        └── style.css
+├── home_app/          (empty)
+│
+├── ml_models/         (empty) 
+│
+├── static/
+│   └── global.css
+│
+└── templates/
+    └── base.html

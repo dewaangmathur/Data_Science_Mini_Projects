@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Fraud Result{% endblock %}
+
+{% block content %}
+<h2>🔎 Prediction Result</h2>
+
+<style>
+  .fraud {
+    color: red;
+  }
+  .no-fraud {
+    color: green;
+  }
+</style>
+
+<p>
+  Result:
+  <span class="{% if 'Fraud' in result %}fraud{% else %}no-fraud{% endif %}">{{ result }}</span>
+</p>
+
+<a href="{% url 'fraud_home' %}">Try Another</a>
+{% endblock %}
